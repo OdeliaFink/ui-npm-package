@@ -1,34 +1,40 @@
 import Button from '../components/Button';
 
 export default {
-  title: 'components/Button',
+  title: 'Components/Button',
   component: Button,
-  argTypes: { handleClick: { action: 'handleClick' } },
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 };
 
-const Template = (args) => <Button {...args} />;
+export const Primary = {
+  args: {
+    primary: true,
+    label: 'Button',
+  },
+};
 
-export const Red = Template.bind({});
-Red.args = {
-  backgroundColor: 'red',
-  label: 'press me',
-  size: 'md',
+export const Secondary = {
+  args: {
+    label: 'Button',
+  },
 };
-export const Green = Template.bind({});
-Green.args = {
-  backgroundColor: 'green',
-  label: 'press me',
-  size: 'md',
+
+export const Large = {
+  args: {
+    size: 'large',
+    label: 'Button',
+  },
 };
-export const Small = Template.bind({});
-Small.args = {
-  backgroundColor: 'red',
-  label: 'press me',
-  size: 'sm',
-};
-export const Large = Template.bind({});
-Large.args = {
-  backgroundColor: 'red',
-  label: 'press me',
-  size: 'lg',
+
+export const Small = {
+  args: {
+    size: 'small',
+    label: 'Button',
+  },
 };
