@@ -33,33 +33,9 @@ Horizontal.args = {
   spacing: 2,
   wrap: false,
 };
-
 export const Vertical = Template.bind({});
 Vertical.args = {
   direction: 'column',
-  spacing: 2,
-  wrap: false,
-};
-
-export const NoSpacing = Template.bind({});
-NoSpacing.args = {
-  direction: 'row',
-  spacing: 0,
-  wrap: false,
-};
-
-export const WrapOverflow = Template.bind({});
-WrapOverflow.args = {
-  numberOfChildren: 40,
-  direction: 'row',
-  spacing: 2,
-  wrap: true,
-};
-
-export const Empty = Template.bind({});
-Empty.args = {
-  numberOfChildren: 0,
-  direction: 'row',
-  spacing: 2,
+  spacing: 1,
   wrap: false,
 };
