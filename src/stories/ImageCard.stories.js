@@ -1,4 +1,5 @@
 import { ImageCard } from '../components/ImageCard';
+import img1 from '../image/img1.avif';
 
 export default {
   title: 'Components/ImageCard',
@@ -8,7 +9,10 @@ export default {
   // },
 };
 
-const Template = ({ ...args }) => <ImageCard {...args} />;
+const Template = ({ imageUrl, desc, ...args }) => <ImageCard {...args} />;
 
 export const ImageCardReg = Template.bind({});
-ImageCardReg.args = {};
+ImageCardReg.args = {
+  imageUrl: img1,
+  desc: 'buy now',
+};

@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import img1 from '../image/img1.avif';
-import Button from './Button';
 
 const CardContainer = styled.div`
   display: flex;
@@ -27,20 +25,19 @@ const TextContainer = styled.div`
 
 const Description = styled.p`
   font-size: 1.5rem;
-  word-wrap: break-word; /* Wrap the text to the next line */
+  word-wrap: break-word;
 `;
 
-export const ImageCard = ({
-  desc = "Stock Up on Back-to-School Snacks With Amazon's Bulk Snack Deals!",
-  imageUrl = img1,
-}) => {
+export const ImageCard = ({ desc, imageUrl }) => {
   return (
     <>
       <CardContainer>
         <ImageContainer>
           <Image src={imageUrl} />
         </ImageContainer>
-        <TextContainer>{/* <Description>{desc}</Description> */}</TextContainer>
+        <TextContainer>
+          <Description>{desc}</Description>
+        </TextContainer>
       </CardContainer>
     </>
   );
