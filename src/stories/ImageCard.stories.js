@@ -13,6 +13,6 @@ const Template = ({ imageUrl, desc, ...args }) => <ImageCard {...args} />;
 
 export const ImageCardReg = Template.bind({});
 ImageCardReg.args = {
-  imageUrl: img1,
+  imageUrl: '../image/img1.avif',
   desc: 'buy now',
 };
