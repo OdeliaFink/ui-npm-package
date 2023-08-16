@@ -7,7 +7,7 @@ const ButtonWrapper = styled.button`
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.6rem;
 
   &:hover {
     background-color: ${(props) => props.hoverBgColor};

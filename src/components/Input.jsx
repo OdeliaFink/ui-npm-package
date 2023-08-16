@@ -11,12 +11,13 @@ const sizeScale = {
 
 const SearchBar = styled.input`
   width: ${(props) => props.size};
-  padding: ${(props) => `.9rem ${props.scale * 2}rem`};
+  padding: 0.5rem ${(props) => props.scale * 2}rem 0.5rem 0.5rem;
   border: 3px solid #ccc;
   border-radius: 2rem;
   outline: none;
   transition: border-color 0.3s ease-in-out;
   font-weight: ${(props) => props.fontType};
+  font-size: 0.5rem;
 
   &:focus {
     border: 3px solid ${(props) => props.inFocusBorderColor};

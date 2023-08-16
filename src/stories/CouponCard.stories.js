@@ -1,5 +1,6 @@
 import CouponCard from '../components/CouponCard';
 import img1 from '../image/img1.avif';
+import amazonLogo from '../image/amazon-logo.webp';
 
 export default {
   title: 'Components/CouponCard',
@@ -15,5 +16,6 @@ CouponCardTest.args = {
 };
 export const CouponCardNoText = Template.bind({});
 CouponCardNoText.args = {
-  image: img1,
+  title: '',
+  image: amazonLogo,
 };
