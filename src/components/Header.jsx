@@ -7,14 +7,16 @@ import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 const HeaderContainer = styled.nav`
   height: 2rem;
-  padding: 1rem;
+  padding: 10px 0 20px 0;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-inline: 1rem;
 `;
 
 const LoggedInText = styled.span`
@@ -35,6 +37,10 @@ const MainContainer = styled.div`
     rgba(245, 149, 27, 0.8702074579831933) 50%,
     rgba(255, 147, 0, 1) 100%
   );
+`;
+
+const SLink = styled(Link)`
+  text-decoration: none;
 `;
 
 export const Header = ({
@@ -96,15 +102,28 @@ export const Header = ({
     <HiContainer>
       <Router>
         <nav>
-          <ul>
+          <ul
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              listStyle: 'none',
+              width: '70%',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              justifyContent: 'space-between',
+              paddingBottom: '10px',
+            }}
+          >
             <li>
-              <Link to="/">Home</Link>
+              <SLink style={{ textDecoration: 'none' }} to="/">
+                Home
+              </SLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <SLink to="/about">About</SLink>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <SLink to="/contact">Contact</SLink>
             </li>
           </ul>
         </nav>
