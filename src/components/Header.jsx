@@ -41,6 +41,7 @@ const MainContainer = styled.div`
 
 const SLink = styled(Link)`
   text-decoration: none;
+  color: black;
 `;
 
 export const Header = ({
@@ -66,9 +67,6 @@ export const Header = ({
         <div>
           {user ? (
             <>
-              <LoggedInText>
-                welcome, <b>{user.name}</b>!
-              </LoggedInText>
               <Button
                 size="small"
                 onClick={onLogout}
@@ -116,14 +114,14 @@ export const Header = ({
           >
             <li>
               <SLink style={{ textDecoration: 'none' }} to="/">
-                Home
+                home
               </SLink>
             </li>
             <li>
-              <SLink to="/about">About</SLink>
+              <SLink to="/about">about</SLink>
             </li>
             <li>
-              <SLink to="/contact">Contact</SLink>
+              <SLink to="/contact">contact</SLink>
             </li>
           </ul>
         </nav>
